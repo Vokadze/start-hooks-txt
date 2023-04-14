@@ -12,7 +12,7 @@ const ExampleHOC = () => {
             <h1 className="mb-5">Higher-Order Components</h1>
             <h2>withQuery</h2>
             <WithQueryUserMeta userGuid="F1CD23D2-5330-4219-27AD-D3EEBBCEE1EA" />
-            <UserMeta />
+            <hr />
             <h2>withQuery & withEditUserPhone</h2>
             <WithQueryEdit userGuid="F1CD23D2-5330-4219-27AD-D3EEBBCEE1EA" />
         </>

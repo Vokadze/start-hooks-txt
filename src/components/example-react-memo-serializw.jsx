@@ -23,11 +23,18 @@ const Parent = () => {
             <div>
                 <Children onIncrement={handleCount} user={user} />
             </div>
+            <div>
+                <Children user={user} />
+            </div>
         </div>
     );
 };
 
-const Children = ({ user, onIncrement }) => {
+function areEqual(prevProps, nextProps) {
+    return prevProps.user.name === nextProps.user.name;
+}
+
+const Children = React.memo(({ user, onIncrement }) => {
     useEffect(() => {
         console.log("render");
     });
@@ -42,7 +49,7 @@ const Children = ({ user, onIncrement }) => {
             </div>
         </div>
     );
-};
+}, areEqual);
 
 Children.propTypes = {
     user: PropTypes.object.isRequired,

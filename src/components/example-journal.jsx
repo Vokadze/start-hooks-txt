@@ -32,12 +32,16 @@ const Text = ({ text }) => {
 
 const CheckSubscrube = () => {
     const [isSubscribe, setIsSubscribe] = useState(false);
+
+    // Получаем элемент
     const myText = <Text text={someText} />;
 
+    // Клонируем его
     const nextText = React.cloneElement(myText, {
-        text: isSubscribe
-            ? myText.props.text
-            : getTwoParagraph(myText.props.text)
+        // Меняем пропс text
+        text: isSubscribe // если подписан
+            ? myText.props.text // вернуть просто текст
+            : getTwoParagraph(myText.props.text) // иначе обрезать
     });
 
     return (

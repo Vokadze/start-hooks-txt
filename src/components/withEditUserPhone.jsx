@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { EditUserPhone, UserEditBtn } from "../components/hoc-edit-user";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 export const withEditUserPhone = (Component) => {
     return (props) => {
@@ -44,6 +44,6 @@ export const withEditUserPhone = (Component) => {
     };
 };
 
-withEditUserPhone.propTypes = {
-    phone: PropTypes.string
-};
+// withEditUserPhone.propTypes = {
+//    phone: PropTypes.string
+// };

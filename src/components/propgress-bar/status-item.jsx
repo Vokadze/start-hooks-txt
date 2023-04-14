@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import "./style.css";
+import "./style.css";
 
 const StatutusItem = ({ children, isDone, onClick, value }) => {
     const styleClassName = `step-progress-item ${
@@ -23,4 +23,5 @@ StatutusItem.propTypes = {
     onClick: PropTypes.func,
     value: PropTypes.number.isRequired
 };
+
 export default StatutusItem;

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import "./style.css";
 import StatutusItem from "../propgress-bar/status-item";
 import PropTypes from "prop-types";
-// import "./style.css";
 
-const StatusBar = ({ children, value, onChange }) => {
+const Statusbar = ({ children, value, onChange }) => {
     const countChildren = React.Children.count(children);
 
     if (!countChildren) {
@@ -29,7 +29,7 @@ const StatusBar = ({ children, value, onChange }) => {
     );
 };
 
-StatusBar.propTypes = {
+Statusbar.propTypes = {
     children: PropTypes.array.isRequired,
     value: PropTypes.number.isRequired,
     onChange: PropTypes.func
@@ -43,13 +43,13 @@ const SomeComponent = () => {
     };
 
     return (
-        <StatusBar value={value} onChange={handleChangeValue}>
+        <Statusbar value={value} onChange={handleChangeValue}>
             <StatutusItem value={1}>Шаг 1</StatutusItem>
             <StatutusItem value={2}>Шаг 2</StatutusItem>
             <StatutusItem value={3}>Шаг 3</StatutusItem>
             <StatutusItem value={4}>Шаг 4</StatutusItem>
             <StatutusItem value={5}>Шаг 5</StatutusItem>
-        </StatusBar>
+        </Statusbar>
     );
 };
 
